@@ -1,0 +1,41 @@
+{% extends "base.html" %}{% block title %}Indian Railways · Clover Railways{% endblock %}
+{% block content %}
+<section class="hero landing"><div class="magic-particles" aria-hidden="true"></div>
+ <div class="hero-copy">
+  <p class="eyebrow">THE NORTHEAST, CONNECTED BY RAIL</p>
+  <h1>Discover Northeast India.<br><em>One journey at a time.</em></h1>
+  <p class="lead">From the gateway city of Guwahati to the tea gardens of Dibrugarh, the Barak Valley, Arunachal foothills and the hills of the Northeast, rail journeys connect communities, culture and opportunity. CLOVER RAILWAYS is a student-built reservation demo inspired by this remarkable region.</p>
+  <div class="hero-actions"><a class="btn btn-gold" href="{{ url_for('about') }}">Explore Northeast Routes</a><span class="muted">A student-built reservation experience</span></div>
+ </div>
+ <div class="emblem-panel">
+  <div class="rune-ring"><div class="rune">✥</div><div class="rune-caption">GRIMOIRE OF<br>THE NORTHEAST</div></div>
+  <p class="emblem-hint">TAP THE CLOVER TO ENTER</p>
+  <a class="clover-launch" href="{{ url_for('portal') }}" aria-label="Open reservation portal" title="Enter reservation portal">
+   <svg viewBox="0 0 200 200" role="img" aria-label="Five-leaf clover emblem">
+    <defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#ff5965"/><stop offset="1" stop-color="#a90d25"/></linearGradient></defs>
+    <g fill="url(#g)" stroke="#ffc1c6" stroke-width="2">
+     <path d="M100 95 C57 83 52 39 78 29 C100 20 111 51 100 95Z"/>
+     <path d="M105 95 C117 52 160 42 171 68 C180 90 147 108 105 95Z"/>
+     <path d="M106 103 C149 91 177 124 160 146 C144 166 113 139 106 103Z"/>
+     <path d="M96 106 C106 149 76 179 54 160 C33 142 57 112 96 106Z"/>
+     <path d="M94 97 C51 108 24 78 41 55 C58 34 88 57 94 97Z"/>
+     <path d="M98 105 Q100 131 100 166" fill="none" stroke-width="7" stroke-linecap="round"/>
+    </g>
+    <circle cx="100" cy="100" r="12" fill="#15120d" stroke="url(#g)" stroke-width="3"/>
+   </svg>
+  </a>
+  <p class="emblem-note">Your Northeast journey begins here.</p>
+ </div>
+ <div class="hero-bottom"><span>01 / EXPLORE THE NORTHEAST</span><span>✦ &nbsp; A JOURNEY THROUGH ASSAM & BEYOND</span><span>SCROLL TO DISCOVER</span></div>
+</section>
+<section class="intro-strip">
+ <div><span class="stat">ASSAM</span><span class="stat-label">Gateway to Northeast journeys</span></div>
+ <div><span class="stat">8 STATES</span><span class="stat-label">Northeast region</span></div>
+ <div><span class="stat">NORTHEAST</span><span class="stat-label">Connected through journeys</span></div>
+</section>
+<section class="section about-preview">
+ <p class="eyebrow">THE SPIRIT OF THE NORTHEAST</p><h2>More than a journey.<br><em>A region of stories.</em></h2>
+ <p>Explore sample routes linking Guwahati, Dibrugarh, Tinsukia, Silchar, Jorhat, Naharlagun and nearby gateways. This academic project demonstrates train search, passenger booking, PNR generation, booking status and ticket cancellation. All services and fares shown are illustrative demo data.</p>
+ <a class="text-link" href="{{ url_for('about') }}">Explore the Northeast network ↗</a>
+</section>
+{% endblock %}

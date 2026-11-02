@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Clover Railways{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="{{ url_for('index') }}"><span class="mini-clover">✥</span><span>CLOVER <b>RAILWAYS</b></span></a>
+  <nav><a href="{{ url_for('portal') }}">Reservation</a><a href="{{ url_for('pnr_status') }}">PNR Status</a><a href="{{ url_for('cancel') }}">Cancel Ticket</a><a href="{{ url_for('admin') }}">Admin</a></nav>
+</header>
+{% with messages = get_flashed_messages(with_categories=true) %}{% if messages %}<div class="flash-wrap">{% for category, message in messages %}<div class="flash {{ category }}">{{ message }}</div>{% endfor %}</div>{% endif %}{% endwith %}
+<div class="page-transition" aria-hidden="true"><div class="transition-track"></div><div class="transition-train"><span class="engine">🚆</span><span class="coach"></span><span class="coach"></span><span class="coach"></span></div><span class="transition-label">CLOVER RAILWAYS · NORTHEAST EXPRESS</span></div>
+<main>{% block content %}{% endblock %}</main>
+<footer><span>✥ CLOVER RAILWAYS · NORTHEAST INDIA</span><span>Assam & Northeast route demo · Not affiliated with IRCTC / Indian Railways</span></footer>
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body></html>
